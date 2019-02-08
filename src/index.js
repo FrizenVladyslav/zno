@@ -1,5 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+
+import 'semantic-ui-css/semantic.min.css'
 import './assets/styles/index.css'
 import Wrapper from 'containers/Wrapper'
 import * as serviceWorker from './serviceWorker'

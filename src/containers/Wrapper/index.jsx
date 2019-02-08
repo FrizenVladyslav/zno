@@ -3,8 +3,9 @@ import { Provider } from 'react-redux'
 import { Router, Route, Switch } from 'react-router'
 import { ToastContainer } from 'react-toastify'
 
-import Home from '../Public'
-import store from 'store'
+import Admin from '../Admin'
+import Public from '../Public/index'
+import store from 'utils/store'
 import history from 'utils/history'
 
 class Wrapper extends Component {
@@ -24,7 +25,8 @@ class Wrapper extends Component {
           />
           <Router history={history}>
             <Switch>
-              <Route path="/" component={Home} />
+              <Route path="/" component={Public} exact />
+              <Route path="/admin" component={Admin} />
             </Switch>
           </Router>
         </>
