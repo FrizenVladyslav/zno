@@ -2,8 +2,11 @@ import { StyleSheet } from 'aphrodite/no-important'
 
 export default StyleSheet.create({
   sidebar: {
-    padding: '20px',
-    width: '100%',
+    height: '100vh',
+    width: 'calc(15% - 20px)',
+    padding: '10px',
+    position: 'fixed',
+    zIndex: 2,
   },
 
   logo: {

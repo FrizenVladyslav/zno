@@ -9,12 +9,12 @@ import Lessons from './Lessons'
 
 const Admin = props => {
   return (
-    <Grid>
-      <Grid.Column computer={3}>
+    <Grid className={css(styles.container)}>
+      <Grid.Column computer={2}>
         <Sidebar />
       </Grid.Column>
-      <Grid.Column computer={13}>
-        <Container fluid>
+      <Grid.Column computer={14}>
+        <Container fluid className={css(styles.container)}>
           <Switch>
             <Redirect from="/admin" to="/admin/lessons" exact />
             <Route path="/admin/lessons" component={Lessons} exact />
