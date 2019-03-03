@@ -1,6 +1,15 @@
 import { StyleSheet } from 'aphrodite/no-important'
 import { centerAbsolute, bounceAnim, centerFlex } from 'assets/styles/mixins'
 
+const shadowStyle = {
+  color: '#333',
+  background: '#333',
+  WebkitBackgroundClip: 'text',
+  MozBackgroundClip: 'text',
+  backgroundClip: 'text',
+  textShadow: '0px 3px 3px rgba(255,255,255,0.5)',
+}
+
 export default StyleSheet.create({
   header: {
     ':nth-child(1n) .header-content': {
@@ -18,10 +27,6 @@ export default StyleSheet.create({
         textShadow: '1px 3px 0 #000, 1px 13px 5px #333',
         color: '#969696',
       },
-    },
-    ':nth-child(1n) > .header-logo': {
-      position: 'absolute',
-      zIndex: 40,
     },
     ':nth-child(1n) .arrow-bottom': {
       ...centerAbsolute,
@@ -58,6 +63,20 @@ export default StyleSheet.create({
         },
       },
     },
+    ':nth-child(1n) > .header-logo': {
+      ':nth-child(1n) a': {
+        ':nth-child(1n) > h2': {
+          marginTop: 0,
+          fontSize: '1.71428571rem',
+          ...shadowStyle,
+        },
+        ':nth-child(1n) > i': {
+          marginLeft: '20px',
+          fontSize: '4em',
+          ...shadowStyle,
+        },
+      },
+    },
   },
 
   main: {
@@ -69,6 +88,7 @@ export default StyleSheet.create({
     ':nth-child(1n) .description': {
       ...centerFlex,
       flexDirection: 'column',
+      paddingBottom: '10%',
       ':nth-child(1n) h4': {
         textAlign: 'center',
         fontSize: 25,

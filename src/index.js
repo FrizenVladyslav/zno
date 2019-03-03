@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 
 import 'semantic-ui-css/semantic.min.css'
 import './assets/styles/index.css'
-import Wrapper from 'containers/Wrapper'
+import Wrapper from 'containers/Public'
 import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(<Wrapper />, document.getElementById('root'))

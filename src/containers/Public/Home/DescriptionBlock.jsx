@@ -1,17 +1,17 @@
 import React from 'react'
-
 import { Grid, Image, Button, Icon } from 'semantic-ui-react'
 import { css } from 'aphrodite'
+
 import styles from './styles'
 
-const DescriptionRow = ({ img, text, invert }) => {
+const DescriptionBlock = props => {
   return (
     <Grid.Row columns={2} className={css(styles.descRow)}>
-      <Grid.Column style={invert && { order: 2 }}>
-        <Image src={img} />
+      <Grid.Column style={props.invert && { order: 2 }}>
+        <Image src={props.img} />
       </Grid.Column>
       <Grid.Column className="description">
-        <h4>{text}</h4>
+        <h4>{props.text}</h4>
         <Button animated primary>
           <Button.Content visible>Next</Button.Content>
           <Button.Content hidden>
@@ -23,4 +23,4 @@ const DescriptionRow = ({ img, text, invert }) => {
   )
 }
 
-export default DescriptionRow
+export default DescriptionBlock

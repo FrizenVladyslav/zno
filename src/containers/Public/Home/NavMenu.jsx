@@ -1,7 +1,7 @@
 import React from 'react'
-
 import { Link } from 'react-router-dom'
 import { css } from 'aphrodite/no-important'
+
 import styles from './styles'
 import Logo from 'components/Logo'
 

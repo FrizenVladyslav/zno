@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-
+// @ts-ignore
 import { Parallax } from 'react-parallax'
 import { Icon, Container, Grid } from 'semantic-ui-react'
 import { css } from 'aphrodite/no-important'
+
 import styles from './styles'
 import NavMenu from './NavMenu'
-import DescriptionRow from './DescriptionRow'
+import DescriptionBlock from './DescriptionBlock'
 
 import headerBg from 'assets/images/hand-pen.jpg'
 import notePhone from 'assets/images/note-phone.jpg'
@@ -17,7 +18,7 @@ class Home extends Component {
       <>
         <header className={css(styles.header)}>
           <NavMenu />
-          <Parallax bgImage={headerBg} strength={500} blur={0}>
+          <Parallax bgImage={headerBg} strength={-100} blur={0}>
             <div className="header-content">
               <h1>Склади ЗНО краще за всіх</h1>
             </div>
@@ -27,11 +28,11 @@ class Home extends Component {
         <main className={css(styles.main)}>
           <Container>
             <Grid>
-              <DescriptionRow
+              <DescriptionBlock
                 img={notePhone}
                 text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, non. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, non."
               />
-              <DescriptionRow
+              <DescriptionBlock
                 img={students}
                 text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, non. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, non."
                 invert

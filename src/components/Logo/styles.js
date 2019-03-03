@@ -1,8 +1,8 @@
 import { StyleSheet } from 'aphrodite/no-important'
 
 const shadowStyle = {
-  color: '#333',
-  background: '#333',
+  color: 'transparent',
+  background: '#666666',
   WebkitBackgroundClip: 'text',
   MozBackgroundClip: 'text',
   backgroundClip: 'text',
@@ -12,13 +12,17 @@ const shadowStyle = {
 export default StyleSheet.create({
   logo: {
     width: 150,
+    fontStyle: 'oblique',
+    marginTop: -15,
     ':nth-child(1n) > h2': {
-      fontStyle: 'oblique',
-      marginTop: 0,
+      fontSize: 14,
+      marginTop: -10,
+      marginLeft: 13,
       ...shadowStyle,
     },
     ':nth-child(1n) > i': {
       marginLeft: '20px',
+      fontSize: 40,
       ...shadowStyle,
     },
   },

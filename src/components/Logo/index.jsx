@@ -7,7 +7,7 @@ import styles from './styles'
 
 const Logo = props => {
   return (
-    <Link to="/" className={css(styles.logo)}>
+    <Link to="/" className={css(styles.logo)} {...props}>
       <Icon name="student" size="huge" />
       <h2>Краще за всіх</h2>
     </Link>
