@@ -1,12 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import App from 'containers/App'
 
-import 'semantic-ui-css/semantic.min.css'
-import './assets/styles/index.css'
-import Wrapper from 'containers/Public'
 import * as serviceWorker from './serviceWorker'
 
-ReactDOM.render(<Wrapper />, document.getElementById('root'))
+//basic styles for application
+import 'semantic-ui-css/semantic.min.css'
+import 'react-toastify/dist/ReactToastify.css'
+import './assets/styles/index.css'
+
+ReactDOM.render(<App />, document.getElementById('root'))
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

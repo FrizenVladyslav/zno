@@ -1,6 +1,6 @@
 import clone from 'lodash/clone'
 
-const prefix = 'LESSON_'
+const prefix = 'SECTION_'
 
 export const actionTypes = {
   ADD: `${prefix}ADD`,
@@ -9,29 +9,29 @@ export const actionTypes = {
 }
 
 const initState = {
-  lessons: null,
+  sections: null,
 }
 
-export default function lessonReducer(state = initState, action) {
+export default function sectionReducer(state = initState, action) {
   switch (action.type) {
     case actionTypes.ADD:
       return {
         ...state,
-        lessons: [...state.lessons, action.payload],
+        sections: [...state.sections, action.payload],
       }
     case actionTypes.EDIT:
       const { id, title } = action.payload
-      const lessons = clone(state.lessons)
-      lessons[lessons.findIndex(({ _id }) => _id === id)].title = title
+      const sections = clone(state.sections)
+      sections[sections.findIndex(({ _id }) => _id === id)].title = title
 
       return {
         ...state,
-        lessons,
+        sections,
       }
     case actionTypes.SET:
       return {
         ...state,
-        lessons: action.payload,
+        sections: action.payload,
       }
     default:
       return state
