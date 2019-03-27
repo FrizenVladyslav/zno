@@ -94,4 +94,18 @@ export default class Api {
       body,
     })
   }
+
+  static uploadFile(endpoint, data) {
+    console.log('data', data)
+
+    return axios({
+      method: 'post',
+      url: `${Api.host}${endpoint}`,
+      data,
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+      responseType: 'json',
+    })
+  }
 }

@@ -18,8 +18,17 @@ export async function get(params) {
   store.dispatch({ type: actionTypes.SET, payload: res.data })
 }
 
-export async function edit(body) {
-  let res = await Api.put(`${endpoint}/${body.id}`, body)
+export async function getById(id) {
+  let res = await Api.get(`${endpoint}/${id}`)
+  if (res.status !== 200) throw new Error('Lection not found')
+
+  store.dispatch({ type: actionTypes.GET, payload: res.data })
+
+  return res.data
+}
+
+export async function edit(id, body) {
+  let res = await Api.put(`${endpoint}/${id}`, body)
   if (res.status !== 200) throw new Error('Lection not edited')
 
   store.dispatch({ type: actionTypes.EDIT, payload: body })
