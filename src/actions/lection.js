@@ -33,3 +33,7 @@ export async function edit(id, body) {
 
   store.dispatch({ type: actionTypes.EDIT, payload: body })
 }
+
+export function unset() {
+  store.dispatch({ type: actionTypes.UNSET })
+}

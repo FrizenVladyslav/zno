@@ -216,11 +216,9 @@ class Lessons extends Component {
   }
 }
 
-export default connect(state => ({
-  // @ts-ignore
-  lessons: state.lesson.lessons,
-  // @ts-ignore
-  sections: state.section.sections,
-  // @ts-ignore
-  lections: state.lection.lections,
+// @ts-ignore
+export default connect(({ lesson, section, lection }) => ({
+  lessons: lesson.lessons,
+  sections: section.sections,
+  lections: lection.lections,
 }))(Lessons)

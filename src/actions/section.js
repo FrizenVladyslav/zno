@@ -25,3 +25,7 @@ export async function edit(id, title) {
 
   store.dispatch({ type: actionTypes.EDIT, payload: { id, title } })
 }
+
+export function unset() {
+  store.dispatch({ type: actionTypes.UNSET })
+}

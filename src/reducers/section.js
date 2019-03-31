@@ -6,6 +6,7 @@ export const actionTypes = {
   ADD: `${prefix}ADD`,
   EDIT: `${prefix}EDIT`,
   SET: `${prefix}SET`,
+  UNSET: `${prefix}_UNSET`,
 }
 
 const initState = {
@@ -33,6 +34,8 @@ export default function sectionReducer(state = initState, action) {
         ...state,
         sections: action.payload,
       }
+    case actionTypes.UNSET:
+      return { ...initState }
     default:
       return state
   }

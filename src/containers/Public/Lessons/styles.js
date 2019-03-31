@@ -8,4 +8,11 @@ export default StyleSheet.create({
       fontSize: 17,
     },
   },
+
+  cardGroup: {
+    justifyContent: 'center',
+    ':nth-child(1n) > .card': {
+      margin: 15,
+    },
+  },
 })

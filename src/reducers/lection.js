@@ -45,7 +45,7 @@ export default function lectionReducer(state = initState, action) {
         lections: action.payload,
       }
     case actionTypes.UNSET:
-      return initState
+      return { ...initState }
     default:
       return state
   }
