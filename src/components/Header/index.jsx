@@ -1,26 +1,51 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { connect } from 'react-redux'
 import { Menu } from 'semantic-ui-react'
 import { NavLink } from 'react-router-dom'
 import { css } from 'aphrodite'
+import Logo from '../Logo'
+import ConfirmModal from '../Modals/ConfirmModal'
+
+import * as userActions from 'actions/user'
 
 import styles from './styles'
-import Logo from '../Logo'
 
-const Header = () => {
+const Header = props => {
+  const [modal, triggerModal] = useState(false)
+
   return (
-    <Menu stackable className={css(styles.menu)}>
-      <Menu.Header>
-        <Logo />
-      </Menu.Header>
-      <Menu.Menu position="right">
-        <Menu.Item name="features">Features</Menu.Item>
-        <Menu.Item name="testimonials">Testimonials</Menu.Item>
-        <Menu.Item name="sign-in" link as={NavLink} to="login">
-          Sign-in
-        </Menu.Item>
-      </Menu.Menu>
-    </Menu>
+    <>
+      <Menu stackable className={css(styles.menu)}>
+        <Menu.Header>
+          <Logo />
+        </Menu.Header>
+        <Menu.Menu position="right">
+          <Menu.Item name="lessons" link as={NavLink} to="/lessons">
+            Предмети
+          </Menu.Item>
+          {console.log('user', props.user._id)}
+          {!!props.user._id ? (
+            <Menu.Item link onClick={() => triggerModal(true)}>
+              {props.user.nick}
+            </Menu.Item>
+          ) : (
+            <Menu.Item as={NavLink} link name="sign-in" to="/login">
+              Увійти
+            </Menu.Item>
+          )}
+        </Menu.Menu>
+      </Menu>
+      <ConfirmModal
+        icon="sign-out"
+        message="Ви дійсно бажаєте вийти?"
+        open={modal}
+        onClose={() => triggerModal(false)}
+        onSuccess={userActions.signOut}
+        title="Вийти"
+      />
+    </>
   )
 }
 
-export default Header
+// @ts-ignore
+export default connect(({ user }) => ({ user }))(Header)

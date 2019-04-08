@@ -1,14 +1,18 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
-import { Grid, Container, Breadcrumb } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
+import { Grid, Container, Breadcrumb, Divider } from 'semantic-ui-react'
 import { toast } from 'react-toastify'
+import { css } from 'aphrodite'
 import LessonsSidebar from 'components/LessonsSidebar'
 import Loader from 'components/Loader'
 import Header from 'components/Header'
 
 import * as lectionActions from 'actions/lection'
 import * as lessonActions from 'actions/lesson'
+
+import styles from './styles'
 
 class Lesson extends Component {
   state = {
@@ -33,7 +37,7 @@ class Lesson extends Component {
   }
 
   render() {
-    const { lection, lessons, match } = this.props
+    const { lection, lessons } = this.props
 
     return (
       <>
@@ -43,15 +47,22 @@ class Lesson extends Component {
         ) : (
           <Container fluid>
             <Grid>
-              <Grid.Column width={13}>
+              <Grid.Column width={13} className={css(styles.content)}>
                 <Breadcrumb>
-                  <Breadcrumb.Section link>Home</Breadcrumb.Section>
-                  <Breadcrumb.Divider icon='right chevron' />
-                  <Breadcrumb.Section link>Registration</Breadcrumb.Section>
-                  <Breadcrumb.Divider icon='right arrow' />
-                  <Breadcrumb.Section active>Personal Information</Breadcrumb.Section>
+                  <Breadcrumb.Section
+                    as={Link}
+                    link
+                    to={`/lessons/${lection.lesson._id}/${lection.section._id}`}
+                  >
+                    {lection.section.title}
+                  </Breadcrumb.Section>
+                  <Breadcrumb.Divider icon="right arrow" />
+                  <Breadcrumb.Section active>
+                    Personal Information
+                  </Breadcrumb.Section>
                 </Breadcrumb>
-                <div />
+                <Divider />
+                <div dangerouslySetInnerHTML={{ __html: lection.content }} />
               </Grid.Column>
               <Grid.Column width={3}>
                 <LessonsSidebar

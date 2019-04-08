@@ -67,10 +67,12 @@ class Lessons extends Component {
               />
             )}
             <Segment loading={this.state.loading} style={{ minHeight: '40vh' }}>
-              <Message info>
-                <Message.Header>Оберіть розділ</Message.Header>
-                <p>Оберіть розділ, який цікавить Вас по данному предмету</p>
-              </Message>
+              {!match.sectionId && (
+                <Message info>
+                  <Message.Header>Оберіть розділ</Message.Header>
+                  <p>Оберіть розділ, який цікавить Вас по данному предмету</p>
+                </Message>
+              )}
               <Switch>
                 <Route
                   path="/lessons/:lessonId?"

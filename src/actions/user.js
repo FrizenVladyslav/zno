@@ -5,6 +5,19 @@ import history from 'utils/history'
 
 const endpoint = 'user'
 
+export async function getUserInfo() {
+  if (!Api.getTokenFromLocalStorage()) return null
+
+  let res = await Api.get(`${endpoint}/getUserInfo`)
+  if (res.status !== 200) return signOut()
+
+  if (!res.data._id) return signOut()
+
+  store.dispatch({ type: actionTypes.SET, payload: res.data })
+
+  return res.data
+}
+
 export async function login(email, password) {
   const body = {
     user: { email, password },
@@ -28,21 +41,19 @@ export async function login(email, password) {
   return res.data
 }
 
+export async function register(email, password, nick) {
+  const body = {
+    user: { email, password, nick },
+  }
+
+  let res = await Api.post(`${endpoint}/register`, body, false)
+  if (res.status !== 200) throw new Error('Помилка регестрації')
+
+  await login(email, password)
+}
+
 export function signOut() {
   Api.deleteTokenFromLocalStorage()
   history.replace('/')
   store.dispatch({ type: actionTypes.UNSET })
-}
-
-export async function getUserInfo() {
-  if (!Api.getTokenFromLocalStorage()) return null
-
-  let res = await Api.get(`${endpoint}/getUserInfo`)
-  if (res.status !== 200) return signOut()
-
-  if (!res.data._id) return signOut()
-
-  store.dispatch({ type: actionTypes.SET, payload: res.data })
-
-  return res.data
 }

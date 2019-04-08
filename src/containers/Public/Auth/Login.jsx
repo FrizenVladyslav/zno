@@ -11,7 +11,9 @@ class Login extends Component {
     errorMessage: '',
   }
 
-  handleLogin = async (email, password) => {
+  handleLogin = async () => {
+    const { email, password } = this.state
+
     try {
       await userActions.login(email, password)
     } catch (e) {
@@ -29,7 +31,7 @@ class Login extends Component {
     if (!email.trim() || !password.trim()) {
       this.setState({ error: true, errorMessage: '' })
     } else {
-      this.handleLogin(email, password)
+      this.handleLogin()
     }
   }
 

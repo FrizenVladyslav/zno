@@ -10,6 +10,7 @@ import {
 
 import Header from 'components/Header'
 import Login from './Login'
+import Register from './Register'
 
 const panes = [
   {
@@ -22,7 +23,11 @@ const panes = [
   },
   {
     menuItem: 'Зареєструватися',
-    render: () => <Tab.Pane attached={false}>Tab 2 Content</Tab.Pane>,
+    render: () => (
+      <Tab.Pane attached={false}>
+        <Register />
+      </Tab.Pane>
+    ),
   },
 ]
 

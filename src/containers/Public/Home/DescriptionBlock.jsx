@@ -12,8 +12,8 @@ const DescriptionBlock = props => {
       </Grid.Column>
       <Grid.Column className="description">
         <h4>{props.text}</h4>
-        <Button animated primary>
-          <Button.Content visible>Next</Button.Content>
+        <Button animated primary onClick={props.onClick}>
+          <Button.Content visible>Перейти</Button.Content>
           <Button.Content hidden>
             <Icon name="arrow right" />
           </Button.Content>

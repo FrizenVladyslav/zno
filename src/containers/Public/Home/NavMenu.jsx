@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { css } from 'aphrodite/no-important'
+import Logo from 'components/Logo'
 
 import styles from './styles'
-import Logo from 'components/Logo'
 
 const NavMenu = props => {
   return (
@@ -13,13 +13,10 @@ const NavMenu = props => {
       </div>
       <ul>
         <li>
-          <Link to="lessons">Предмети</Link>
+          <Link to="/lessons">Предмети</Link>
         </li>
         <li>
-          <Link to="rewiew">Відгуки</Link>
-        </li>
-        <li>
-          <Link to="about-us">Про нас</Link>
+          <Link to="/login">Увійти</Link>
         </li>
       </ul>
     </div>
