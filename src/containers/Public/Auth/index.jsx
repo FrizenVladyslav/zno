@@ -7,10 +7,12 @@ import {
   Icon,
   Header as SemanticHeader,
 } from 'semantic-ui-react'
-
+import { css } from 'aphrodite'
 import Header from 'components/Header'
 import Login from './Login'
 import Register from './Register'
+
+import styles from './styles'
 
 const panes = [
   {
@@ -35,12 +37,14 @@ const Auth = () => (
   <>
     <Header />
     <Grid container centered>
-      <Grid.Column computer={10}>
+      <Grid.Column computer={10} tablet={12} mobile={16}>
         <Segment>
           <Segment raised>
             <Grid columns={2} stackable textAlign="center">
-              <Divider vertical>Або</Divider>
-              <Grid.Row verticalAlign="middle">
+              <Divider vertical className={css(styles.divider)}>
+                Або
+              </Divider>
+              <Grid.Row verticalAlign="middle" only="computer">
                 <Grid.Column>
                   <SemanticHeader icon color="blue">
                     <Icon name="sign-in alternate" />

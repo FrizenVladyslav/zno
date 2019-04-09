@@ -1,31 +1,39 @@
 import { StyleSheet } from 'aphrodite/no-important'
-import { centerAbsolute, bounceAnim, centerFlex } from 'assets/styles/mixins'
-
-const shadowStyle = {
-  color: '#333',
-  background: '#333',
-  WebkitBackgroundClip: 'text',
-  MozBackgroundClip: 'text',
-  backgroundClip: 'text',
-  textShadow: '0px 3px 3px rgba(255,255,255,0.5)',
-}
+import {
+  centerAbsolute,
+  bounceAnim,
+  centerFlex,
+  responsive,
+} from 'assets/styles/mixins'
 
 export default StyleSheet.create({
   header: {
     ':nth-child(1n) .header-content': {
       height: '100vh',
-      minHeight: 500,
+      // minHeight: 500,
       position: 'relative',
+      overflow: 'hidden',
       ':nth-child(1n) h1': {
         width: '100%',
         position: 'absolute',
         top: '30%',
         marginLeft: '20%',
         textAlign: 'center',
-        fontSize: '65px',
+        fontSize: 65,
         fontStyle: 'italic',
         textShadow: '1px 3px 0 #000, 1px 13px 5px #333',
         color: '#969696',
+        ...responsive(1200, {
+          fontSize: 40,
+        }),
+        ...responsive(768, {
+          position: 'static',
+          marginTop: '40vh',
+          marginLeft: 0,
+        }),
+        ...responsive(576, {
+          fontSize: 25,
+        }),
       },
     },
     ':nth-child(1n) .arrow-bottom': {
@@ -35,47 +43,6 @@ export default StyleSheet.create({
       fontSize: 35,
       color: '#fff',
       cursor: 'pointer',
-    },
-  },
-
-  navMenu: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: '0 30px',
-    position: 'absolute',
-    zIndex: 40,
-    width: '100%',
-    ':nth-child(1n) > ul': {
-      display: 'flex',
-      listStyleType: 'none',
-      paddingLeft: 0,
-      ':nth-child(1n) > li': {
-        margin: '0 20px',
-        fontSize: 25,
-        ':nth-child(1n) a': {
-          color: '#333',
-          fontWeight: 700,
-          transition: 0.4,
-          ':hover': {
-            textDecoration: 'underline',
-          },
-        },
-      },
-    },
-    ':nth-child(1n) > .header-logo': {
-      ':nth-child(1n) a': {
-        ':nth-child(1n) > h2': {
-          marginTop: 0,
-          fontSize: '1.71428571rem',
-          ...shadowStyle,
-        },
-        ':nth-child(1n) > i': {
-          marginLeft: '20px',
-          fontSize: '4em',
-          ...shadowStyle,
-        },
-      },
     },
   },
 
@@ -97,5 +64,14 @@ export default StyleSheet.create({
         width: '50%',
       },
     },
+    ...responsive(992, {
+      ':nth-child(1n) .description': {
+        order: 3,
+        ':nth-child(1n) > h4': {
+          margin: '40px 0',
+          fontSize: 20,
+        },
+      },
+    }),
   },
 })

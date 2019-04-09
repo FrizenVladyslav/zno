@@ -37,3 +37,7 @@ export const bounceAnim = duration => ({
   animationDuration: `${duration}s`,
   animationIterationCount: 'infinite',
 })
+
+export function responsive(maxWidth, styles) {
+  return { [`@media (max-width: ${maxWidth}px)`]: { ...styles } }
+}

@@ -5,7 +5,7 @@ import Logo from 'components/Logo'
 
 import styles from './styles'
 
-const NavMenu = props => {
+const NavMenu = () => {
   return (
     <div className={css(styles.navMenu)}>
       <div className="header-logo">

@@ -14,10 +14,10 @@ class Sidebar extends Component {
           <Logo />
         </Menu.Item>
         <Menu.Item>
-          <Menu.Header>Предмети</Menu.Header>
+          <Menu.Header>Керування</Menu.Header>
           <Menu.Menu>
-            <Menu.Item name="enterprise" />
-            <Menu.Item name="consumer" />
+            <Menu.Item name="Предмети" />
+            <Menu.Item name="Користувачі" />
           </Menu.Menu>
         </Menu.Item>
       </Menu>

@@ -33,7 +33,7 @@ class Lessons extends Component {
   loadLessons = async () => {
     const { lessons, match } = this.props
     try {
-      Promise.all([
+      await Promise.all([
         !lessons && lessonActions.get(),
         match.params.lessonId && sectionActions.get(match.params.lessonId),
       ])
@@ -51,14 +51,14 @@ class Lessons extends Component {
       <div>
         <Header />
         <Grid>
-          <Grid.Column width={3}>
+          <Grid.Column computer={3} tablet={4} mobile={16}>
             <LessonsSidebar
               activeLesson={match.params.lessonId}
               lessons={lessons}
               secondary
             />
           </Grid.Column>
-          <Grid.Column width={12}>
+          <Grid.Column computer={12} tablet={12} mobile={16}>
             {!match.params.lessonId && lessons && (
               <Redirect
                 from="/lessons"

@@ -47,7 +47,11 @@ class Lesson extends Component {
         ) : (
           <Container fluid>
             <Grid>
-              <Grid.Column width={13} className={css(styles.content)}>
+              <Grid.Column
+                width={13}
+                mobile={16}
+                className={css(styles.content)}
+              >
                 <Breadcrumb>
                   <Breadcrumb.Section
                     as={Link}
@@ -64,7 +68,7 @@ class Lesson extends Component {
                 <Divider />
                 <div dangerouslySetInnerHTML={{ __html: lection.content }} />
               </Grid.Column>
-              <Grid.Column width={3}>
+              <Grid.Column width={3} mobile={16}>
                 <LessonsSidebar
                   activeLesson={lection.lesson._id}
                   lessons={lessons}
