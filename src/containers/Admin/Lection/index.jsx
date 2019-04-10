@@ -10,6 +10,7 @@ import {
   convertDraftToHtml,
   getEditorLength,
 } from 'utils/wysiwygEditor'
+import history from 'utils/history'
 import Loader from 'components/Loader'
 import Editor from './Editor'
 
@@ -69,6 +70,10 @@ class Lection extends Component {
         icon: 'student',
         title: lection.lesson.title,
         description: lection.section.title,
+        onClick: () =>
+          history.push(
+            `/admin/lessons/${lection.lesson._id}/${lection.section._id}`
+          ),
       },
       {
         key: 'status',
