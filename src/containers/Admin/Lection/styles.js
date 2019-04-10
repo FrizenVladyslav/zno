@@ -16,6 +16,10 @@ export default StyleSheet.create({
       margin: 0,
       marginBottom: 10,
     },
+
+    ':nth-child(1n) img': {
+      maxWidth: '100%',
+    },
   },
 
   linkPopup: {
@@ -24,6 +28,7 @@ export default StyleSheet.create({
 
   toolbarFixed: {
     position: 'fixed',
+    maxWidth: 1140,
     zIndex: 999,
     opacity: 1,
     top: 0,
