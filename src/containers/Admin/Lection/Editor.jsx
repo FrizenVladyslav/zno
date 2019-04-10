@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import embed from 'embed-video'
 import { css } from 'aphrodite'
 import WysiwygEditor from 'components/WysiwygEditor'
@@ -8,6 +8,7 @@ import * as fileActions from 'actions/file'
 import styles from './styles'
 
 const Editor = props => {
+  const [fixed, toggleFixed] = React.useState(false)
   const toolbarOptions = {
     link: {
       popupClassName: css(styles.linkPopup),
@@ -30,6 +31,13 @@ const Editor = props => {
     },
   }
 
+  React.useEffect(() => {
+    window.addEventListener('scroll', onWindowScroll)
+    return () => {
+      window.removeEventListener('scroll', onWindowScroll)
+    }
+  })
+
   async function uploadCallback(file) {
     let image = await fileActions.uploadImage(file)
     let urlImage = await fileActions.getPhoto(image.filePath)
@@ -39,6 +47,15 @@ const Editor = props => {
     })
   }
 
+  function onWindowScroll() {
+    console.log('window', window.scrollY, window.innerHeight, fixed)
+    if (window.scrollY >= 200 && !fixed) {
+      toggleFixed(true)
+    } else if (window.scrollY < 200 && fixed) {
+      toggleFixed(false)
+    }
+  }
+
   return (
     <WysiwygEditor
       editorState={props.content}
@@ -46,6 +63,7 @@ const Editor = props => {
       onEditorStateChange={props.onChange}
       placeholder="Вміст..."
       toolbar={toolbarOptions}
+      toolbarClassName={css(fixed && styles.toolbarFixed)}
     />
   )
 }

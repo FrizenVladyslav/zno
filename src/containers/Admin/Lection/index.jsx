@@ -21,6 +21,7 @@ class Lection extends Component {
   state = {
     loading: true,
     content: EditorState.createEmpty(),
+    fixed: false,
   }
 
   componentDidMount = () => {
@@ -76,6 +77,7 @@ class Lection extends Component {
         completed: !lection.draft,
         title: lection.title,
         description: lection.draft ? 'У чорновику' : 'Опубліковано',
+        style: { maxWidth: 600 },
       },
     ]
   }

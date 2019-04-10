@@ -67,7 +67,7 @@ class Lessons extends Component {
               />
             )}
             <Segment loading={this.state.loading} style={{ minHeight: '40vh' }}>
-              {!match.sectionId && (
+              {!match.params.sectionId && (
                 <Message info>
                   <Message.Header>Оберіть розділ</Message.Header>
                   <p>Оберіть розділ, який цікавить Вас по данному предмету</p>

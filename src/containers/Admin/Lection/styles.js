@@ -21,4 +21,12 @@ export default StyleSheet.create({
   linkPopup: {
     left: -228,
   },
+
+  toolbarFixed: {
+    position: 'fixed',
+    zIndex: 999,
+    opacity: 1,
+    top: 0,
+    backgroundColor: '#fff',
+  },
 })
