@@ -31,7 +31,7 @@ export async function edit(id, body) {
   let res = await Api.put(`${endpoint}/${id}`, body)
   if (res.status !== 200) throw new Error('Lection not edited')
 
-  store.dispatch({ type: actionTypes.EDIT, payload: body })
+  store.dispatch({ type: actionTypes.EDIT, payload: { id, ...body } })
 }
 
 export function unset() {

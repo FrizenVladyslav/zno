@@ -18,7 +18,11 @@ const Admin = props => {
         <Container fluid className={css(styles.container)}>
           <Switch>
             <Redirect from="/admin" to="/admin/lessons" exact />
-            <Route path="/admin/lessons" component={Lessons} exact />
+            <Route
+              path="/admin/lessons/:lessonId?/:sectionId?"
+              component={Lessons}
+              exact
+            />
             <Route path="/admin/edit-lection/:id" component={Lection} exact />
           </Switch>
         </Container>

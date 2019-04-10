@@ -26,6 +26,7 @@ export default function lectionReducer(state = initState, action) {
       const { id } = action.payload
       const lections = clone(state.lections)
       const index = lections ? lections.findIndex(({ _id }) => _id === id) : -1
+
       if (index !== -1) {
         const updatedLection = Object.assign(lections[index], action.payload)
         lections[index] = updatedLection

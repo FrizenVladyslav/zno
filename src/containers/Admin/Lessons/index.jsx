@@ -25,19 +25,53 @@ class Lessons extends Component {
   }
 
   componentDidMount = () => {
-    this.getLessons()
+    this.getInfo()
   }
 
-  getLessons = async () => {
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.location.pathname !== this.props.location.pathname) {
+      if (
+        prevProps.match.params.lessonId !== this.props.match.params.lessonId
+      ) {
+        lectionActions.unset()
+      }
+      this.getInfo()
+    }
+  }
+
+  getInfo = async () => {
+    const { params } = this.props.match
+
     try {
-      lessonActions.get()
+      await Promise.all([
+        lessonActions.get(),
+        params.lessonId && sectionActions.get(params.lessonId),
+        params.sectionId && lectionActions.get({ section: params.sectionId }),
+      ])
     } catch (e) {
       toast.error(e.message || e)
     }
   }
 
+  get parentsInfo() {
+    const {
+      match: { params },
+      lessons,
+      sections,
+    } = this.props
+    let lesson =
+      params.lessonId && lessons.find(({ _id }) => _id === params.lessonId)
+    let section =
+      sections && sections.find(({ _id }) => _id === params.sectionId)
+
+    return {
+      lesson,
+      section,
+    }
+  }
+
   handleCreateLection = async title => {
-    const { lesson, section } = this.state
+    const { lesson, section } = this.parentsInfo
 
     try {
       await lectionActions.add({
@@ -64,7 +98,7 @@ class Lessons extends Component {
 
   handleCreateSection = async title => {
     try {
-      await sectionActions.add(title, this.state.lesson._id)
+      await sectionActions.add(title, this.parentsInfo.lesson._id)
     } catch (e) {
       toast.error(e.message || e)
     } finally {
@@ -80,9 +114,10 @@ class Lessons extends Component {
 
   handleEditeLection = async title => {
     const { id } = this.state.modal
+    const lection = this.props.lections.find(({ _id }) => _id === id)
 
     try {
-      await lectionActions.edit({ id, title })
+      await lectionActions.edit(id, { ...lection, title })
     } catch (e) {
       toast.error(e.message || e)
     } finally {
@@ -114,24 +149,6 @@ class Lessons extends Component {
     }
   }
 
-  handleSelectLesson = async lesson => {
-    try {
-      await sectionActions.get(lesson._id)
-      this.setState({ lesson })
-    } catch (e) {
-      toast.error(e.message || e)
-    }
-  }
-
-  handleSelectSection = async section => {
-    try {
-      await lectionActions.get({ section: section._id })
-      this.setState({ section })
-    } catch (e) {
-      toast.error(e.message || e)
-    }
-  }
-
   render() {
     const { modal } = this.state
 
@@ -156,46 +173,48 @@ class Lessons extends Component {
               item._id
             )
           }
-          onSelect={this.handleSelectLesson}
+          onSelect={({ _id }) => history.push(`/admin/lessons/${_id}`)}
         />
         <List
           title="Розділи"
           list={this.props.sections}
-          disabledAddButton={!this.state.lesson}
+          disabledAddButton={!this.parentsInfo.lesson}
           onAdd={() =>
             this.handleChangeModal(
               'Створити розділ',
               this.handleCreateSection,
-              this.state.lesson.title
+              this.parentsInfo.lesson.title
             )
           }
           onEdit={item =>
             this.handleChangeModal(
               'Редагувати розділ',
               this.handleEditeSection,
-              this.state.lesson.title,
+              this.parentsInfo.lesson.title,
               item.title,
               item._id
             )
           }
-          onSelect={this.handleSelectSection}
+          onSelect={({ _id }) =>
+            history.push(`/admin/lessons/${this.parentsInfo.lesson._id}/${_id}`)
+          }
         />
         <List
           title="Лекції"
           list={this.props.lections}
-          disabledAddButton={!this.state.section}
+          disabledAddButton={!this.parentsInfo.section}
           onAdd={() =>
             this.handleChangeModal(
               'Створити лекцію',
               this.handleCreateLection,
-              this.state.section.title
+              this.parentsInfo.section.title
             )
           }
           onEdit={item =>
             this.handleChangeModal(
               'Редагувати лекцію',
               this.handleEditeLection,
-              this.state.section.title,
+              this.parentsInfo.section.title,
               item.title,
               item._id
             )
