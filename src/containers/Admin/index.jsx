@@ -5,6 +5,7 @@ import { css } from 'aphrodite/no-important'
 import Lection from './Lection'
 import Lessons from './Lessons'
 import Sidebar from './Sidebar'
+import Users from './Users'
 
 import styles from './styles'
 
@@ -23,7 +24,8 @@ const Admin = props => {
               component={Lessons}
               exact
             />
-            <Route path="/admin/edit-lection/:id" component={Lection} exact />
+            <Route path="/admin/edit-lection/:id" component={Lection} />
+            <Route path="/admin/users" component={Users} />
           </Switch>
         </Container>
       </Grid.Column>

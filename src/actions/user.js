@@ -5,6 +5,13 @@ import history from 'utils/history'
 
 const endpoint = 'user'
 
+export async function getAllUsers() {
+  let res = await Api.get(`${endpoint}/getAllUsers`)
+  if (res.status !== 200) throw new Error('Users not geted')
+
+  return res.data
+}
+
 export async function getUserInfo() {
   if (!Api.getTokenFromLocalStorage()) return null
 

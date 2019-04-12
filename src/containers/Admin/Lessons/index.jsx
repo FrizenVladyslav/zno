@@ -25,6 +25,7 @@ class Lessons extends Component {
   }
 
   componentDidMount = () => {
+    sectionActions.unset()
     this.getInfo()
   }
 

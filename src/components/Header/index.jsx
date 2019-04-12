@@ -20,6 +20,11 @@ const Header = props => {
           <Logo />
         </Menu.Header>
         <Menu.Menu position="right">
+          {props.user.role === 'admin' && (
+            <Menu.Item name="admin" link as={NavLink} to="/admin">
+              Адміністрування
+            </Menu.Item>
+          )}
           <Menu.Item name="lessons" link as={NavLink} to="/lessons">
             Предмети
           </Menu.Item>
