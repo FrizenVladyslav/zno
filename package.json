@@ -26,19 +26,31 @@
     "semantic-ui-react": "^0.85.0"
   },
   "devDependencies": {
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "enzyme-to-json": "^3.3.5",
     "eslint-plugin-prettier": "3.0.0",
     "husky": "1.1.4",
+    "jest": "^24.7.1",
     "prettier": "1.15.2",
-    "pretty-quick": "1.8.0"
+    "pretty-quick": "1.8.0",
+    "redux-mock-store": "^1.5.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>__tests__/setup/setupEnzyme.js",
+    "testPathIgnorePatterns": [
+      "<rootDir>/__tests__/setup/"
+    ]
   },
   "browserslist": [
     ">0.2%",
