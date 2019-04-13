@@ -20,13 +20,8 @@ const Editor = props => {
     },
     embedded: {
       embedCallback: link => {
-        if (
-          link.indexOf('www.youtube.com') !== -1 ||
-          link.indexOf('vimeo.com') !== -1
-        ) {
-          const detectedSrc = /<iframe.*? src="(.*?)"/.exec(embed(link))
-          return (detectedSrc && detectedSrc[1]) || link
-        }
+        const detectedSrc = /<iframe.*? src="(.*?)"/.exec(embed(link))
+        return (detectedSrc && detectedSrc[1]) || link
       },
     },
   }
