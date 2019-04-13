@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LessonActions add lesson action 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "title": 1,
+    },
+    "type": "LESSON_ADD",
+  },
+]
+`;
+
+exports[`LessonActions add lessons action 1`] = `
+Array [
+  Object {
+    "payload": Array [
+      1,
+      2,
+      3,
+    ],
+    "type": "LESSON_ADD",
+  },
+]
+`;
+
+exports[`LessonActions get lessons action 1`] = `
+Array [
+  Object {
+    "payload": Array [
+      1,
+      2,
+      3,
+    ],
+    "type": "LESSON_SET",
+  },
+]
+`;

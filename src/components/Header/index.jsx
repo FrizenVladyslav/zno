@@ -28,7 +28,6 @@ const Header = props => {
           <Menu.Item name="lessons" link as={NavLink} to="/lessons">
             Предмети
           </Menu.Item>
-          {console.log('user', props.user._id)}
           {!!props.user._id ? (
             <Menu.Item link onClick={() => triggerModal(true)}>
               {props.user.nick}

@@ -5,9 +5,7 @@ const instance = axios.create({
   headers: {
     'Content-Type': 'application/json',
   },
-  validateStatus: function(status) {
-    return true
-  },
+  validateStatus: () => true,
 })
 
 export default class Api {
@@ -96,8 +94,6 @@ export default class Api {
   }
 
   static uploadFile(endpoint, data) {
-    console.log('data', data)
-
     return axios({
       method: 'post',
       url: `${Api.host}${endpoint}`,

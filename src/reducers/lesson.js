@@ -9,7 +9,7 @@ export const actionTypes = {
 }
 
 const initState = {
-  lessons: null,
+  lessons: [],
 }
 
 export default function lessonReducer(state = initState, action) {

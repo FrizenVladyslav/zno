@@ -19,7 +19,6 @@ export async function get(lessonId) {
 }
 
 export async function edit(id, title) {
-  console.log('id title', id, title)
   let res = await Api.put(`${endpoint}/${id}`, { title })
   if (res.status !== 200) throw new Error('Section not edited')
 

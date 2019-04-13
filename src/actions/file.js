@@ -12,7 +12,6 @@ export async function uploadImage(file) {
   return res.data
 }
 
-export async function getPhoto(path) {
-  console.log('path', `${Api.host}${encodeURI(path)}`)
+export function getPhoto(path) {
   return `${Api.host}${encodeURI(path)}`
 }

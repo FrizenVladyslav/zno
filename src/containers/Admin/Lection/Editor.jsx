@@ -48,7 +48,6 @@ const Editor = props => {
   }
 
   function onWindowScroll() {
-    console.log('window', window.scrollY, window.innerHeight, fixed)
     if (window.scrollY >= 200 && !fixed) {
       toggleFixed(true)
     } else if (window.scrollY < 200 && fixed) {
