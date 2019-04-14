@@ -10,7 +10,6 @@ describe('private route', () => {
     }
     const privateRoute = shallow(<PrivateRoute {...initProps} />)
     it('render properly', () => {
-      console.log('priivateRoute', privateRoute.debug())
       expect(privateRoute).toMatchSnapshot()
     })
 
