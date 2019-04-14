@@ -1,9 +1,9 @@
 import clone from 'lodash/clone'
-import reducer, { actionTypes } from 'reducers/lesson'
+import reducer, { actionTypes } from 'reducers/section'
 
-describe('lesson reducer', () => {
+describe('section reducer', () => {
   const initState = {
-    lessons: [],
+    sections: [],
   }
 
   it(actionTypes.ADD, () => {
@@ -14,26 +14,26 @@ describe('lesson reducer', () => {
 
     expect(reducer(initState, action)).toEqual({
       ...initState,
-      lessons: [...initState.lessons, action.payload],
+      sections: [...initState.sections, action.payload],
     })
   })
 
   it(actionTypes.EDIT, () => {
     const initState = {
-      lessons: [{ _id: 1, title: 'lesson' }],
+      sections: [{ _id: 1, lessonId: 1, title: 'section' }],
     }
     const action = {
       type: actionTypes.EDIT,
-      payload: { id: 1, lesson: 'lesson edited' },
+      payload: { id: 1, section: 'section edited' },
     }
     const { id, title } = action.payload
-    const lessons = clone(initState.lessons)
+    const sections = clone(initState.sections)
 
-    lessons[lessons.findIndex(({ _id }) => _id === id)].title = title
+    sections[sections.findIndex(({ _id }) => _id === id)].title = title
 
     expect(reducer(initState, action)).toEqual({
       ...initState,
-      lessons,
+      sections,
     })
   })
 
@@ -45,7 +45,14 @@ describe('lesson reducer', () => {
 
     expect(reducer(initState, action)).toEqual({
       ...initState,
-      lessons: action.payload,
+      sections: action.payload,
     })
+  })
+
+  it(actionTypes.UNSET, () => {
+    const state = { sections: [{ _id: 1, lessonId: 1, title: 'section' }] }
+    const action = { type: actionTypes.UNSET }
+
+    expect(reducer(state, action)).toEqual({ sections: null })
   })
 })
