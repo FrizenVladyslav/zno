@@ -1,0 +1,818 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`footer renders properly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Footer
+    lessons={
+      Array [
+        Object {
+          "_id": "1",
+          "title": "title1",
+        },
+        Object {
+          "_id": "2",
+          "title": "title2",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": <Container>
+        <div>
+          <Logo
+            style={
+              Object {
+                "alignSelf": "flex-end",
+              }
+            }
+          />
+          <p>
+            © Всі права захищені)
+          </p>
+        </div>
+        <ul>
+          <li>
+            Предмети:
+          </li>
+          <li>
+            <Link
+              replace={false}
+              to="/lessons/1"
+            >
+              title1
+            </Link>
+          </li>
+          <li>
+            <Link
+              replace={false}
+              to="/lessons/2"
+            >
+              title2
+            </Link>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            Інші посилання:
+          </li>
+          <li>
+            <Link
+              replace={false}
+              to="/login"
+            >
+              Увійти
+            </Link>
+          </li>
+          <li>
+            <Link
+              replace={false}
+              to="/lessons"
+            >
+              Зайняття
+            </Link>
+          </li>
+        </ul>
+      </Container>,
+      "className": "footer_7e9spg",
+      "placeholder": true,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <div>
+            <Logo
+              style={
+                Object {
+                  "alignSelf": "flex-end",
+                }
+              }
+            />
+            <p>
+              © Всі права захищені)
+            </p>
+          </div>,
+          <ul>
+            <li>
+              Предмети:
+            </li>
+            <li>
+              <Link
+                replace={false}
+                to="/lessons/1"
+              >
+                title1
+              </Link>
+            </li>
+            <li>
+              <Link
+                replace={false}
+                to="/lessons/2"
+              >
+                title2
+              </Link>
+            </li>
+          </ul>,
+          <ul>
+            <li>
+              Інші посилання:
+            </li>
+            <li>
+              <Link
+                replace={false}
+                to="/login"
+              >
+                Увійти
+              </Link>
+            </li>
+            <li>
+              <Link
+                replace={false}
+                to="/lessons"
+              >
+                Зайняття
+              </Link>
+            </li>
+          </ul>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Logo
+                style={
+                  Object {
+                    "alignSelf": "flex-end",
+                  }
+                }
+              />,
+              <p>
+                © Всі права захищені)
+              </p>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "style": Object {
+                  "alignSelf": "flex-end",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "© Всі права захищені)",
+              },
+              "ref": null,
+              "rendered": "© Всі права захищені)",
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li>
+                Предмети:
+              </li>,
+              Array [
+                <li>
+                  <Link
+                    replace={false}
+                    to="/lessons/1"
+                  >
+                    title1
+                  </Link>
+                </li>,
+                <li>
+                  <Link
+                    replace={false}
+                    to="/lessons/2"
+                  >
+                    title2
+                  </Link>
+                </li>,
+              ],
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Предмети:",
+              },
+              "ref": null,
+              "rendered": "Предмети:",
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "host",
+              "props": Object {
+                "children": <Link
+                  replace={false}
+                  to="/lessons/1"
+                >
+                  title1
+                </Link>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "title1",
+                  "replace": false,
+                  "to": "/lessons/1",
+                },
+                "ref": null,
+                "rendered": "title1",
+                "type": [Function],
+              },
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "2",
+              "nodeType": "host",
+              "props": Object {
+                "children": <Link
+                  replace={false}
+                  to="/lessons/2"
+                >
+                  title2
+                </Link>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "title2",
+                  "replace": false,
+                  "to": "/lessons/2",
+                },
+                "ref": null,
+                "rendered": "title2",
+                "type": [Function],
+              },
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li>
+                Інші посилання:
+              </li>,
+              <li>
+                <Link
+                  replace={false}
+                  to="/login"
+                >
+                  Увійти
+                </Link>
+              </li>,
+              <li>
+                <Link
+                  replace={false}
+                  to="/lessons"
+                >
+                  Зайняття
+                </Link>
+              </li>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Інші посилання:",
+              },
+              "ref": null,
+              "rendered": "Інші посилання:",
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <Link
+                  replace={false}
+                  to="/login"
+                >
+                  Увійти
+                </Link>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Увійти",
+                  "replace": false,
+                  "to": "/login",
+                },
+                "ref": null,
+                "rendered": "Увійти",
+                "type": [Function],
+              },
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <Link
+                  replace={false}
+                  to="/lessons"
+                >
+                  Зайняття
+                </Link>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Зайняття",
+                  "replace": false,
+                  "to": "/lessons",
+                },
+                "ref": null,
+                "rendered": "Зайняття",
+                "type": [Function],
+              },
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+      ],
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <Container>
+          <div>
+            <Logo
+              style={
+                Object {
+                  "alignSelf": "flex-end",
+                }
+              }
+            />
+            <p>
+              © Всі права захищені)
+            </p>
+          </div>
+          <ul>
+            <li>
+              Предмети:
+            </li>
+            <li>
+              <Link
+                replace={false}
+                to="/lessons/1"
+              >
+                title1
+              </Link>
+            </li>
+            <li>
+              <Link
+                replace={false}
+                to="/lessons/2"
+              >
+                title2
+              </Link>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              Інші посилання:
+            </li>
+            <li>
+              <Link
+                replace={false}
+                to="/login"
+              >
+                Увійти
+              </Link>
+            </li>
+            <li>
+              <Link
+                replace={false}
+                to="/lessons"
+              >
+                Зайняття
+              </Link>
+            </li>
+          </ul>
+        </Container>,
+        "className": "footer_7e9spg",
+        "placeholder": true,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <div>
+              <Logo
+                style={
+                  Object {
+                    "alignSelf": "flex-end",
+                  }
+                }
+              />
+              <p>
+                © Всі права захищені)
+              </p>
+            </div>,
+            <ul>
+              <li>
+                Предмети:
+              </li>
+              <li>
+                <Link
+                  replace={false}
+                  to="/lessons/1"
+                >
+                  title1
+                </Link>
+              </li>
+              <li>
+                <Link
+                  replace={false}
+                  to="/lessons/2"
+                >
+                  title2
+                </Link>
+              </li>
+            </ul>,
+            <ul>
+              <li>
+                Інші посилання:
+              </li>
+              <li>
+                <Link
+                  replace={false}
+                  to="/login"
+                >
+                  Увійти
+                </Link>
+              </li>
+              <li>
+                <Link
+                  replace={false}
+                  to="/lessons"
+                >
+                  Зайняття
+                </Link>
+              </li>
+            </ul>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <Logo
+                  style={
+                    Object {
+                      "alignSelf": "flex-end",
+                    }
+                  }
+                />,
+                <p>
+                  © Всі права захищені)
+                </p>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "style": Object {
+                    "alignSelf": "flex-end",
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "© Всі права захищені)",
+                },
+                "ref": null,
+                "rendered": "© Всі права захищені)",
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <li>
+                  Предмети:
+                </li>,
+                Array [
+                  <li>
+                    <Link
+                      replace={false}
+                      to="/lessons/1"
+                    >
+                      title1
+                    </Link>
+                  </li>,
+                  <li>
+                    <Link
+                      replace={false}
+                      to="/lessons/2"
+                    >
+                      title2
+                    </Link>
+                  </li>,
+                ],
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Предмети:",
+                },
+                "ref": null,
+                "rendered": "Предмети:",
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": "1",
+                "nodeType": "host",
+                "props": Object {
+                  "children": <Link
+                    replace={false}
+                    to="/lessons/1"
+                  >
+                    title1
+                  </Link>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "title1",
+                    "replace": false,
+                    "to": "/lessons/1",
+                  },
+                  "ref": null,
+                  "rendered": "title1",
+                  "type": [Function],
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": "2",
+                "nodeType": "host",
+                "props": Object {
+                  "children": <Link
+                    replace={false}
+                    to="/lessons/2"
+                  >
+                    title2
+                  </Link>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "title2",
+                    "replace": false,
+                    "to": "/lessons/2",
+                  },
+                  "ref": null,
+                  "rendered": "title2",
+                  "type": [Function],
+                },
+                "type": "li",
+              },
+            ],
+            "type": "ul",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <li>
+                  Інші посилання:
+                </li>,
+                <li>
+                  <Link
+                    replace={false}
+                    to="/login"
+                  >
+                    Увійти
+                  </Link>
+                </li>,
+                <li>
+                  <Link
+                    replace={false}
+                    to="/lessons"
+                  >
+                    Зайняття
+                  </Link>
+                </li>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Інші посилання:",
+                },
+                "ref": null,
+                "rendered": "Інші посилання:",
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <Link
+                    replace={false}
+                    to="/login"
+                  >
+                    Увійти
+                  </Link>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "Увійти",
+                    "replace": false,
+                    "to": "/login",
+                  },
+                  "ref": null,
+                  "rendered": "Увійти",
+                  "type": [Function],
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <Link
+                    replace={false}
+                    to="/lessons"
+                  >
+                    Зайняття
+                  </Link>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "Зайняття",
+                    "replace": false,
+                    "to": "/lessons",
+                  },
+                  "ref": null,
+                  "rendered": "Зайняття",
+                  "type": [Function],
+                },
+                "type": "li",
+              },
+            ],
+            "type": "ul",
+          },
+        ],
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

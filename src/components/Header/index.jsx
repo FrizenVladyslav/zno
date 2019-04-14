@@ -10,7 +10,7 @@ import * as userActions from 'actions/user'
 
 import styles from './styles'
 
-const Header = props => {
+export const Header = props => {
   const [modal, triggerModal] = useState(false)
 
   return (

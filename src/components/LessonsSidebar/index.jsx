@@ -5,7 +5,7 @@ import { css } from 'aphrodite'
 
 import styles from './styles'
 
-const Sidebar = ({ lessons, activeLesson, ...rest }) => {
+export const Sidebar = ({ lessons, activeLesson, ...rest }) => {
   return (
     <Menu vertical pointing className={css(styles.sidebar)} {...rest}>
       <Menu.Item header>Предмет</Menu.Item>
