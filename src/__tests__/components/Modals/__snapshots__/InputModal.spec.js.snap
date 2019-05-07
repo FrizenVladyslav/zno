@@ -1,0 +1,379 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`input modal render with props renders properly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <InputModal
+    defaultValue="defaultValue"
+    label="label"
+    onClose={[MockFunction]}
+    onSuccess={[MockFunction]}
+    open={true}
+    placeholder="placeholder"
+    title="title"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "centered": true,
+      "children": Array [
+        <ModalHeader>
+          title
+        </ModalHeader>,
+        <ModalContent>
+          <Input
+            defaultValue="defaultValue"
+            label={
+              Object {
+                "content": "label",
+                "tag": true,
+              }
+            }
+            labelPosition="right"
+            onChange={[Function]}
+            placeholder="placeholder"
+            type="text"
+          />
+        </ModalContent>,
+        <ModalActions>
+          <Button
+            as="button"
+            content="Cкасувати"
+            icon="close"
+            negative={true}
+            onClick={[MockFunction]}
+          />
+          <Button
+            as="button"
+            content="Підтвердити"
+            icon="checkmark"
+            onClick={[Function]}
+            positive={true}
+          />
+        </ModalActions>,
+      ],
+      "closeOnDimmerClick": true,
+      "closeOnDocumentClick": false,
+      "dimmer": true,
+      "eventPool": "Modal",
+      "onClose": [MockFunction],
+      "open": true,
+      "size": "mini",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": "title",
+        },
+        "ref": null,
+        "rendered": "title",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <Input
+            defaultValue="defaultValue"
+            label={
+              Object {
+                "content": "label",
+                "tag": true,
+              }
+            }
+            labelPosition="right"
+            onChange={[Function]}
+            placeholder="placeholder"
+            type="text"
+          />,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "defaultValue": "defaultValue",
+            "label": Object {
+              "content": "label",
+              "tag": true,
+            },
+            "labelPosition": "right",
+            "onChange": [Function],
+            "placeholder": "placeholder",
+            "type": "text",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Button
+              as="button"
+              content="Cкасувати"
+              icon="close"
+              negative={true}
+              onClick={[MockFunction]}
+            />,
+            <Button
+              as="button"
+              content="Підтвердити"
+              icon="checkmark"
+              onClick={[Function]}
+              positive={true}
+            />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "as": "button",
+              "content": "Cкасувати",
+              "icon": "close",
+              "negative": true,
+              "onClick": [MockFunction],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "as": "button",
+              "content": "Підтвердити",
+              "icon": "checkmark",
+              "onClick": [Function],
+              "positive": true,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "centered": true,
+        "children": Array [
+          <ModalHeader>
+            title
+          </ModalHeader>,
+          <ModalContent>
+            <Input
+              defaultValue="defaultValue"
+              label={
+                Object {
+                  "content": "label",
+                  "tag": true,
+                }
+              }
+              labelPosition="right"
+              onChange={[Function]}
+              placeholder="placeholder"
+              type="text"
+            />
+          </ModalContent>,
+          <ModalActions>
+            <Button
+              as="button"
+              content="Cкасувати"
+              icon="close"
+              negative={true}
+              onClick={[MockFunction]}
+            />
+            <Button
+              as="button"
+              content="Підтвердити"
+              icon="checkmark"
+              onClick={[Function]}
+              positive={true}
+            />
+          </ModalActions>,
+        ],
+        "closeOnDimmerClick": true,
+        "closeOnDocumentClick": false,
+        "dimmer": true,
+        "eventPool": "Modal",
+        "onClose": [MockFunction],
+        "open": true,
+        "size": "mini",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": "title",
+          },
+          "ref": null,
+          "rendered": "title",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <Input
+              defaultValue="defaultValue"
+              label={
+                Object {
+                  "content": "label",
+                  "tag": true,
+                }
+              }
+              labelPosition="right"
+              onChange={[Function]}
+              placeholder="placeholder"
+              type="text"
+            />,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "defaultValue": "defaultValue",
+              "label": Object {
+                "content": "label",
+                "tag": true,
+              },
+              "labelPosition": "right",
+              "onChange": [Function],
+              "placeholder": "placeholder",
+              "type": "text",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Button
+                as="button"
+                content="Cкасувати"
+                icon="close"
+                negative={true}
+                onClick={[MockFunction]}
+              />,
+              <Button
+                as="button"
+                content="Підтвердити"
+                icon="checkmark"
+                onClick={[Function]}
+                positive={true}
+              />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "as": "button",
+                "content": "Cкасувати",
+                "icon": "close",
+                "negative": true,
+                "onClick": [MockFunction],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "as": "button",
+                "content": "Підтвердити",
+                "icon": "checkmark",
+                "onClick": [Function],
+                "positive": true,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

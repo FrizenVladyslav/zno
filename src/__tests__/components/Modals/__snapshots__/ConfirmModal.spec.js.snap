@@ -1,0 +1,454 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`confirm modal confirm modal is open render properly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ConfirmModal
+    icon="icon"
+    message="message"
+    onClose={[MockFunction]}
+    onSuccess={[MockFunction]}
+    open={true}
+    title="title"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "basic": true,
+      "centered": true,
+      "children": Array [
+        <Header
+          content="title"
+          icon="icon"
+        />,
+        <ModalContent>
+          <p>
+            message
+          </p>
+        </ModalContent>,
+        <ModalActions>
+          <Button
+            as="button"
+            basic={true}
+            color="red"
+            inverted={true}
+            onClick={[MockFunction]}
+          >
+            <Icon
+              as="i"
+              name="remove"
+            />
+             Скасувати
+          </Button>
+          <Button
+            as="button"
+            color="green"
+            inverted={true}
+            onClick={[MockFunction]}
+          >
+            <Icon
+              as="i"
+              name="checkmark"
+            />
+             Підтвердити
+          </Button>
+        </ModalActions>,
+      ],
+      "closeOnDimmerClick": true,
+      "closeOnDocumentClick": false,
+      "dimmer": true,
+      "eventPool": "Modal",
+      "onClose": [MockFunction],
+      "open": true,
+      "size": "small",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "content": "title",
+          "icon": "icon",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <p>
+            message
+          </p>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "message",
+          },
+          "ref": null,
+          "rendered": "message",
+          "type": "p",
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Button
+              as="button"
+              basic={true}
+              color="red"
+              inverted={true}
+              onClick={[MockFunction]}
+            >
+              <Icon
+                as="i"
+                name="remove"
+              />
+               Скасувати
+            </Button>,
+            <Button
+              as="button"
+              color="green"
+              inverted={true}
+              onClick={[MockFunction]}
+            >
+              <Icon
+                as="i"
+                name="checkmark"
+              />
+               Підтвердити
+            </Button>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "as": "button",
+              "basic": true,
+              "children": Array [
+                <Icon
+                  as="i"
+                  name="remove"
+                />,
+                " Скасувати",
+              ],
+              "color": "red",
+              "inverted": true,
+              "onClick": [MockFunction],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "as": "i",
+                  "name": "remove",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              " Скасувати",
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "as": "button",
+              "children": Array [
+                <Icon
+                  as="i"
+                  name="checkmark"
+                />,
+                " Підтвердити",
+              ],
+              "color": "green",
+              "inverted": true,
+              "onClick": [MockFunction],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "as": "i",
+                  "name": "checkmark",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              " Підтвердити",
+            ],
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "basic": true,
+        "centered": true,
+        "children": Array [
+          <Header
+            content="title"
+            icon="icon"
+          />,
+          <ModalContent>
+            <p>
+              message
+            </p>
+          </ModalContent>,
+          <ModalActions>
+            <Button
+              as="button"
+              basic={true}
+              color="red"
+              inverted={true}
+              onClick={[MockFunction]}
+            >
+              <Icon
+                as="i"
+                name="remove"
+              />
+               Скасувати
+            </Button>
+            <Button
+              as="button"
+              color="green"
+              inverted={true}
+              onClick={[MockFunction]}
+            >
+              <Icon
+                as="i"
+                name="checkmark"
+              />
+               Підтвердити
+            </Button>
+          </ModalActions>,
+        ],
+        "closeOnDimmerClick": true,
+        "closeOnDocumentClick": false,
+        "dimmer": true,
+        "eventPool": "Modal",
+        "onClose": [MockFunction],
+        "open": true,
+        "size": "small",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "content": "title",
+            "icon": "icon",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <p>
+              message
+            </p>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "message",
+            },
+            "ref": null,
+            "rendered": "message",
+            "type": "p",
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Button
+                as="button"
+                basic={true}
+                color="red"
+                inverted={true}
+                onClick={[MockFunction]}
+              >
+                <Icon
+                  as="i"
+                  name="remove"
+                />
+                 Скасувати
+              </Button>,
+              <Button
+                as="button"
+                color="green"
+                inverted={true}
+                onClick={[MockFunction]}
+              >
+                <Icon
+                  as="i"
+                  name="checkmark"
+                />
+                 Підтвердити
+              </Button>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "as": "button",
+                "basic": true,
+                "children": Array [
+                  <Icon
+                    as="i"
+                    name="remove"
+                  />,
+                  " Скасувати",
+                ],
+                "color": "red",
+                "inverted": true,
+                "onClick": [MockFunction],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "as": "i",
+                    "name": "remove",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                " Скасувати",
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "as": "button",
+                "children": Array [
+                  <Icon
+                    as="i"
+                    name="checkmark"
+                  />,
+                  " Підтвердити",
+                ],
+                "color": "green",
+                "inverted": true,
+                "onClick": [MockFunction],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "as": "i",
+                    "name": "checkmark",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                " Підтвердити",
+              ],
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

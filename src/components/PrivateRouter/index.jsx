@@ -4,7 +4,7 @@ import { toast } from 'react-toastify'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-const PrivateRoute = props => {
+export const PrivateRoute = props => {
   let allow = false
 
   // here private logic ...

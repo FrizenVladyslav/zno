@@ -7,7 +7,7 @@ import Logo from '../Logo'
 
 import styles from './styles'
 
-const Footer = props => {
+export const Footer = props => {
   return (
     <Segment placeholder className={css(styles.footer)}>
       <Container>
